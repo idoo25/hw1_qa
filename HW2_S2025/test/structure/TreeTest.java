@@ -88,8 +88,8 @@ public class TreeTest {
         // Assert
         assertTrue("sendWarning should be called", mockMessageController.wasSendWarningCalled());
         assertEquals("Warning message should match", 
-                    "A problem with Database was found", 
-                    mockMessageController.getLastWarningMessage());
+                "Failed to build tree from database", 
+                mockMessageController.getLastWarningMessage());
         assertNull("Root should remain null after exception", tree.root);
     }
     
